@@ -1,16 +1,8 @@
-# test_flutter
+# Movie Details Application
 
-A new Flutter project.
+In this app, users can view trending, top-rated, popular, and recent movies. Moreover, users can search for movies and tap on a movie to view its details, including its rating. For rendering data about the movies, I have utilized TMDB APIs in this application, and we have integrated Hive for local database storage, which persists in the state even when the application is closed and reopened.
 
-## Getting Started
+## Working video
 
-This project is a starting point for a Flutter application.
+https://github.com/tahasiddiquiii/MovieApp/assets/95746746/808a8177-aef8-4265-b54d-4ddbf6362c15
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
