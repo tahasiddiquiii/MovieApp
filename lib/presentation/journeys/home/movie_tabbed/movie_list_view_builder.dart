@@ -59,9 +59,9 @@ class _MovieListViewBuilderState extends State<MovieListViewBuilder> {
         scrollController.position.maxScrollExtent) {
       widget.apiClient.page = widget.apiClient.page + 1;
 
-      print('scroll listener is callled ${widget.apiClient.page}');
+      // print('scroll listener is callled ${widget.apiClient.page}');
     } else {
-      print('dont call');
+      // print('dont call');
     }
   }
 }
