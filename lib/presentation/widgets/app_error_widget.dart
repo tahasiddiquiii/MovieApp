@@ -31,7 +31,7 @@ class AppErrorWidget extends StatelessWidget {
                 ? TranslationConstants.somethingWentWrong.t(context)
                 : TranslationConstants.checkNetwork.t(context),
             textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.subtitle1,
+            style: Theme.of(context).textTheme.titleMedium,
           ),
           ButtonBar(
             children: [
@@ -40,7 +40,7 @@ class AppErrorWidget extends StatelessWidget {
                 text: TranslationConstants.retry,
               ),
               Button(
-                onPressed: () => Wiredash.of(context)?.show(),
+                onPressed: () => Wiredash.of(context).show(),
                 text: TranslationConstants.feedback,
               ),
             ],

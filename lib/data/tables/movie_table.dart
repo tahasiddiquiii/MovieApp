@@ -1,3 +1,5 @@
+// ignore_for_file: overridden_fields
+
 import 'package:hive/hive.dart';
 
 import '../../domain/entities/movie_entity.dart';
@@ -6,16 +8,19 @@ part 'movie_table.g.dart';
 
 @HiveType(typeId: 0)
 class MovieTable extends MovieEntity {
+  @override
   @HiveField(0)
   final int id;
 
+  @override
   @HiveField(1)
   final String title;
 
+  @override
   @HiveField(2)
   final String posterPath;
 
-  MovieTable({
+  const MovieTable({
     required this.id,
     required this.title,
     required this.posterPath,

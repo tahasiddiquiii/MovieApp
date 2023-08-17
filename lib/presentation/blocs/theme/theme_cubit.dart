@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:bloc/bloc.dart';
 import 'package:test_flutter/domain/entities/no_params.dart';
 import 'package:test_flutter/domain/usecases/get_preferred_theme.dart';

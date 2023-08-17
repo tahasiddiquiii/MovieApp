@@ -1,3 +1,5 @@
+// ignore_for_file: overridden_fields, annotate_overrides, unnecessary_this, unnecessary_new, prefer_collection_literals
+
 import '../../domain/entities/video_entity.dart';
 
 class VideoModel extends VideoEntity {

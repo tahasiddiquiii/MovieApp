@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_declarations, deprecated_member_use, library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -85,11 +87,12 @@ class _LoginFormState extends State<LoginForm> {
             BlocConsumer<LoginCubit, LoginState>(
               buildWhen: (previous, current) => current is LoginError,
               builder: (context, state) {
-                if (state is LoginError)
+                if (state is LoginError) {
                   return Text(
                     state.message.t(context),
                     style: Theme.of(context).textTheme.orangeSubtitle1,
                   );
+                }
                 return const SizedBox.shrink();
               },
               listenWhen: (previous, current) => current is LoginSuccess,
@@ -115,7 +118,7 @@ class _LoginFormState extends State<LoginForm> {
                   BlocProvider.of<LoginCubit>(context).initiateGuestLogin(),
               text: TranslationConstants.guestSignIn,
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Expanded(child: Divider(thickness: 2)),

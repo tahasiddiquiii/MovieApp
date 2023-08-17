@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 
 import '../../../../common/constants/size_constants.dart';
@@ -33,7 +35,7 @@ class TabTitleWidget extends StatelessWidget {
           ),
         ),
         child: Text(
-          title.t(context), 
+          title.t(context),
           style: isSelected
               ? Theme.of(context).textTheme.royalBlueSubtitle1
               : Theme.of(context).textTheme.subtitle1,

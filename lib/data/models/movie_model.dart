@@ -1,3 +1,5 @@
+// ignore_for_file: overridden_fields, annotate_overrides, prefer_collection_literals, unnecessary_new, unnecessary_this
+
 import '../../domain/entities/movie_entity.dart';
 
 class MovieModel extends MovieEntity {
@@ -17,7 +19,7 @@ class MovieModel extends MovieEntity {
   final double? popularity;
   final String? mediaType;
 
-  MovieModel({
+  const MovieModel({
     required this.id,
     this.video,
     this.voteCount,

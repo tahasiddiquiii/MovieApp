@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use, library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -13,6 +15,8 @@ import 'movie_tabbed_constants.dart';
 import 'tab_title_widget.dart';
 
 class MovieTabbedWidget extends StatefulWidget {
+  const MovieTabbedWidget({super.key});
+
   @override
   _MovieTabbedWidgetState createState() => _MovieTabbedWidgetState();
 }
@@ -28,11 +32,6 @@ class _MovieTabbedWidgetState extends State<MovieTabbedWidget>
   void initState() {
     super.initState();
     movieTabbedCubit.movieTabChanged(currentTabIndex: currentTabIndex);
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
   }
 
   @override

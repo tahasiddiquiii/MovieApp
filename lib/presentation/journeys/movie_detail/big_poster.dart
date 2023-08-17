@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
@@ -42,41 +44,39 @@ class BigPoster extends StatelessWidget {
           left: 0,
           right: 0,
           bottom: 0,
-          child:  ListTile(
-  title: Text(
-    movie.title,
-    style: Theme.of(context).textTheme.headline5,
-  ),
-  subtitle: Text(
-    movie.releaseDate ?? '',
-    style: Theme.of(context).textTheme.greySubtitle1,
-  ),
-  trailing: Column(
-    crossAxisAlignment: CrossAxisAlignment.end,
-    children: [
-      Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(
-            Icons.star,
-            color: Colors.amber,
-          
+          child: ListTile(
+            title: Text(
+              movie.title,
+              style: Theme.of(context).textTheme.headline5,
+            ),
+            subtitle: Text(
+              movie.releaseDate ?? '',
+              style: Theme.of(context).textTheme.greySubtitle1,
+            ),
+            trailing: Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Icon(
+                      Icons.star,
+                      color: Colors.amber,
+                    ),
+                    const SizedBox(width: 4),
+                    Text(
+                      movie.voteAverage.convertToScaleString(10),
+                      style: Theme.of(context).textTheme.violetHeadline6,
+                    ),
+                  ],
+                ),
+                Text(
+                  'IMDb Rating',
+                  style: Theme.of(context).textTheme.whiteBodyText2,
+                ),
+              ],
+            ),
           ),
-          SizedBox(width: 4),
-          Text(
-            movie.voteAverage.convertToScaleString(10),
-            style: Theme.of(context).textTheme.violetHeadline6,
-          ),
-        ],
-      ),
-      Text(
-        'IMDb Rating',
-        style: Theme.of(context).textTheme.whiteBodyText2,
-      ),
-    ],
-  ),
-),
-
         ),
         Positioned(
           left: Sizes.dimen_16.w,

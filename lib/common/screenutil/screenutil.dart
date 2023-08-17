@@ -33,11 +33,17 @@ class ScreenUtil {
     _instance.uiWidthPx = width;
     _instance.uiHeightPx = height;
     _instance.allowFontScaling = allowFontScaling;
+    // ignore: deprecated_member_use
     _pixelRatio = window.devicePixelRatio;
+    // ignore: deprecated_member_use
     _screenWidth = window.physicalSize.width;
+    // ignore: deprecated_member_use
     _screenHeight = window.physicalSize.height;
+    // ignore: deprecated_member_use
     _statusBarHeight = window.padding.top;
+    // ignore: deprecated_member_use
     _bottomBarHeight = window.padding.bottom;
+    // ignore: deprecated_member_use
     _textScaleFactor = window.textScaleFactor;
   }
 

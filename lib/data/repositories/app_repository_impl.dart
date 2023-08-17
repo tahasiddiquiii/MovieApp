@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, avoid_renaming_method_parameters
+
 import 'package:dartz/dartz.dart';
 
 import '../../domain/entities/app_error.dart';

@@ -1,3 +1,5 @@
+// ignore_for_file: no_leading_underscores_for_local_identifiers, unnecessary_this, unnecessary_new, prefer_collection_literals
+
 import 'video_model.dart';
 
 class VideoResultModel {

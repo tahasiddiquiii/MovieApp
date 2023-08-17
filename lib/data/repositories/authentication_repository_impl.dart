@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, avoid_renaming_method_parameters, void_checks
+
 import 'dart:io';
 
 import 'package:dartz/dartz.dart';
@@ -65,7 +67,7 @@ class AuthenticationRepositoryImpl extends AuthenticationRepository {
         _authenticationLocalDataSource.deleteSessionId(),
       ]);
     }
-    print(await _authenticationLocalDataSource.getSessionId());
+
     return Right(Unit);
   }
 }

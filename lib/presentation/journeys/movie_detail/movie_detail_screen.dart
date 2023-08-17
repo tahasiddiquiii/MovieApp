@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use, library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -92,7 +94,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                         style: Theme.of(context).textTheme.headline6,
                       ),
                     ),
-                    CastWidget(),
+                    const CastWidget(),
                     VideosWidget(videosCubit: _videosCubit),
                   ],
                 ),
@@ -100,7 +102,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
             } else if (state is MovieDetailError) {
               return Container();
             }
-            return SizedBox.shrink();
+            return const SizedBox.shrink();
           },
         ),
       ),

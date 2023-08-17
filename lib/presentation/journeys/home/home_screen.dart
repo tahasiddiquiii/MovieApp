@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart' hide NavigationDrawer;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:test_flutter/presentation/journeys/drawer/navigation_drawer.dart';
@@ -12,6 +14,8 @@ import 'movie_carousel/movie_carousel_widget.dart';
 import 'movie_tabbed/movie_tabbed_widget.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -74,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       defaultIndex: state.defaultIndex,
                     ),
                   ),
-                  FractionallySizedBox(
+                  const FractionallySizedBox(
                     alignment: Alignment.bottomCenter,
                     heightFactor: 0.4,
                     child: MovieTabbedWidget(),

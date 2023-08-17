@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,12 +12,14 @@ import '../../blocs/cast/cast_cubit.dart';
 import '../../themes/theme_text.dart';
 
 class CastWidget extends StatelessWidget {
+  const CastWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<CastCubit, CastState>(
       builder: (context, state) {
         if (state is CastLoaded) {
-          return Container(
+          return SizedBox(
             height: Sizes.dimen_100.h,
             child: ListView.builder(
               shrinkWrap: true,
@@ -23,7 +27,7 @@ class CastWidget extends StatelessWidget {
               itemCount: state.casts.length,
               itemBuilder: (context, index) {
                 final castEntity = state.casts[index];
-                return Container(
+                return SizedBox(
                   height: Sizes.dimen_100.h,
                   width: Sizes.dimen_160.w,
                   child: Card(

@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
@@ -36,7 +38,7 @@ class LoginCubit extends Cubit<LoginState> {
     emit(eitherResponse.fold(
       (l) {
         var message = getErrorMessage(l.appErrorType);
-        print(message);
+
         return LoginError(message);
       },
       (r) => LoginSuccess(),

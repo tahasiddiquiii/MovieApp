@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 
 import '../../common/constants/size_constants.dart';
@@ -34,7 +36,7 @@ class Button extends StatelessWidget {
       ),
       padding: EdgeInsets.symmetric(horizontal: Sizes.dimen_16.w),
       margin: EdgeInsets.symmetric(vertical: Sizes.dimen_10.h),
-      height: Sizes.dimen_16.h,
+      height: Sizes.dimen_18.h,
       child: TextButton(
         key: const ValueKey('main_button'),
         onPressed: isEnabled ? onPressed : null,

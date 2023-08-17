@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -5,6 +7,8 @@ import '../../../../domain/entities/movie_entity.dart';
 import '../../../blocs/movie_backdrop/movie_backdrop_cubit.dart';
 
 class MovieDataWidget extends StatelessWidget {
+  const MovieDataWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<MovieBackdropCubit, MovieEntity?>(

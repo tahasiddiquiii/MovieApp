@@ -23,16 +23,16 @@ class MovieCarouselWidget extends StatelessWidget {
     return Stack(
       fit: StackFit.expand,
       children: [
-        MovieBackdropWidget(),
+        const MovieBackdropWidget(),
         Column(
           children: [
-            MovieAppBar(),
+            const MovieAppBar(),
             MoviePageView(
               movies: movies,
               initialPage: defaultIndex,
             ),
-            MovieDataWidget(),
-            Separator(),
+            const MovieDataWidget(),
+            const Separator(),
           ],
         ),
       ],

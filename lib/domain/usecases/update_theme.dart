@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_renaming_method_parameters
+
 import 'package:dartz/dartz.dart';
 import '../entities/app_error.dart';
 import '../repositories/app_repository.dart';

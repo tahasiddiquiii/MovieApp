@@ -1,33 +1,42 @@
+// ignore_for_file: overridden_fields, prefer_collection_literals, unnecessary_this
+
 import '../../domain/entities/movie_detail_entity.dart';
 
 class MovieDetailModel extends MovieDetailEntity {
   final bool? adult;
+  @override
   final String? backdropPath;
   final BelongsToCollection? belongsToCollection;
   final int? budget;
   final List<Genres?>? genres;
   final String? homepage;
+  @override
   final int id;
   final String? imdbId;
   final String? originalLanguage;
   final String? originalTitle;
+  @override
   final String? overview;
   final double? popularity;
+  @override
   final String posterPath;
   final List<ProductionCompanies?>? productionCompanies;
   final List<ProductionCountries?>? productionCountries;
+  @override
   final String? releaseDate;
   final int? revenue;
   final int? runtime;
   final List<SpokenLanguages?>? spokenLanguages;
   final String? status;
   final String? tagline;
+  @override
   final String title;
   final bool? video;
+  @override
   final num? voteAverage;
   final int? voteCount;
 
-  MovieDetailModel(
+  const MovieDetailModel(
       {this.adult,
       this.backdropPath,
       this.belongsToCollection,
@@ -68,7 +77,7 @@ class MovieDetailModel extends MovieDetailEntity {
       adult: json['adult'],
       backdropPath: json['backdrop_path'],
       belongsToCollection: json['belongs_to_collection'] != null
-          ? new BelongsToCollection.fromJson(json['belongs_to_collection'])
+          ? BelongsToCollection.fromJson(json['belongs_to_collection'])
           : null,
       budget: json['budget'],
       genres: _genres(json),
@@ -93,7 +102,7 @@ class MovieDetailModel extends MovieDetailEntity {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = Map<String, dynamic>();
     data['adult'] = this.adult;
     data['backdrop_path'] = this.backdropPath;
     if (this.belongsToCollection != null) {
@@ -140,7 +149,7 @@ _genres(Map<String, dynamic> json) {
   if (json['genres'] != null) {
     final genres = List<Genres>.empty(growable: true);
     json['genres'].forEach((v) {
-      genres.add(new Genres.fromJson(v));
+      genres.add(Genres.fromJson(v));
     });
   }
 }
@@ -161,7 +170,7 @@ class BelongsToCollection {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = Map<String, dynamic>();
     data['id'] = this.id;
     data['name'] = this.name;
     data['poster_path'] = this.posterPath;
@@ -182,7 +191,7 @@ class Genres {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = Map<String, dynamic>();
     data['id'] = this.id;
     data['name'] = this.name;
     return data;
@@ -205,7 +214,7 @@ class ProductionCompanies {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = Map<String, dynamic>();
     data['id'] = this.id;
     data['logo_path'] = this.logoPath;
     data['name'] = this.name;
@@ -226,7 +235,7 @@ class ProductionCountries {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = Map<String, dynamic>();
     data['iso_3166_1'] = this.iso31661;
     data['name'] = this.name;
     return data;
@@ -245,7 +254,7 @@ class SpokenLanguages {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = Map<String, dynamic>();
     data['iso_639_1'] = this.iso6391;
     data['name'] = this.name;
     return data;
