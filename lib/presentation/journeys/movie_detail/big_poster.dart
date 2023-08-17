@@ -65,7 +65,8 @@ class BigPoster extends StatelessWidget {
                     ),
                     const SizedBox(width: 4),
                     Text(
-                      movie.voteAverage.convertToScaleString(10),
+                      // movie.voteAverage.convertToScaleString(10),
+                      movie.voteAverage.toString(),
                       style: Theme.of(context).textTheme.violetHeadline6,
                     ),
                   ],
